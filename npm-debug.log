@@ -1,0 +1,65 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/boxen/nodenv/versions/v0.10.38/bin/node',
+1 verbose cli   '/opt/boxen/nodenv/versions/v0.10.38/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'mongodb' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.38
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'mongodb', null ]
+6 verbose cache add name=undefined spec="mongodb" args=["mongodb",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'mongodb',
+7 verbose parsed url   path: 'mongodb',
+7 verbose parsed url   href: 'mongodb' }
+8 silly lockFile 7f1c982e-mongodb mongodb
+9 verbose lock mongodb /Users/aventura/.npm/7f1c982e-mongodb.lock
+10 silly lockFile 7f1c982e-mongodb mongodb
+11 silly lockFile 7f1c982e-mongodb mongodb
+12 verbose addNamed [ 'mongodb', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 886df635-mongodb mongodb@
+15 verbose lock mongodb@ /Users/aventura/.npm/886df635-mongodb.lock
+16 silly addNameRange { name: 'mongodb', range: '*', hasData: false }
+17 verbose request where is /nexus/content/groups/npm-all/mongodb
+18 verbose request registry https://npm.hubteam.com/
+19 verbose request id a7fda3ee798522e9
+20 verbose url raw /nexus/content/groups/npm-all/mongodb
+21 verbose url resolving [ 'https://npm.hubteam.com/',
+21 verbose url resolving   './nexus/content/groups/npm-all/mongodb' ]
+22 verbose url resolved https://npm.hubteam.com/nexus/content/groups/npm-all/mongodb
+23 verbose request where is https://npm.hubteam.com/nexus/content/groups/npm-all/mongodb
+24 info trying registry request attempt 1 at 22:15:29
+25 http GET https://npm.hubteam.com/nexus/content/groups/npm-all/mongodb
+26 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+27 info trying registry request attempt 2 at 22:16:55
+28 http GET https://npm.hubteam.com/nexus/content/groups/npm-all/mongodb
+29 info retry will retry, error on last attempt: Error: connect ETIMEDOUT
+30 info trying registry request attempt 3 at 22:19:10
+31 http GET https://npm.hubteam.com/nexus/content/groups/npm-all/mongodb
+32 silly lockFile 886df635-mongodb mongodb@
+33 silly lockFile 886df635-mongodb mongodb@
+34 error network connect ETIMEDOUT
+34 error network This is most likely not a problem with npm itself
+34 error network and is related to network connectivity.
+34 error network In most cases you are behind a proxy or have bad network settings.
+34 error network
+34 error network If you are behind a proxy, please make sure that the
+34 error network 'proxy' config is set properly.  See: 'npm help config'
+35 error System Darwin 13.4.0
+36 error command "/opt/boxen/nodenv/versions/v0.10.38/bin/node" "/opt/boxen/nodenv/versions/v0.10.38/bin/npm" "install" "mongodb"
+37 error cwd /Users/aventura/dev/src/DemoWebApp
+38 error node -v v0.10.38
+39 error npm -v 1.4.28
+40 error syscall connect
+41 error code ETIMEDOUT
+42 error errno ETIMEDOUT
+43 verbose exit [ 1, true ]

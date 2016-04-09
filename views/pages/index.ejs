@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1>Messages</h1>
+    </div>
+  </div>
+  <div class="container">
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>
+          <span class="glyphicon glyphicon-heart-empty"></span>
+          Post messages for your friends to see
+        </h2>
+
+        <form method="post" action="/">
+          <div class="form-group">
+            <input type="text" name="message" class="form-control message-input" id="message" placeholder="What would you like to say?" maxlength="500" />
+            <button type="submit" class="btn btn-default message-submit">Post</button>
+          </div>
+        </form>
+
+        <div class="posted-messages">
+          <% for(var i=0; i<messages.length; i++) {%>
+            <div class="single-message">
+              <%= messages[i].messageText %>
+            </div>
+        <% } %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
