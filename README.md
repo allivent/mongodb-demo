@@ -36,7 +36,7 @@ To set up mongodb:
   - (http://mongoosejs.com/docs/index.html)
 - Create a file named .env in the main directory and paste the input from this command 
   - heroku config | grep MONGOLAB_URI
-  - Your replace the : with a = and remove spaces It should look like: MONGOLAB_URI=mongodb://...
+  - You will need to replace the : with a = and remove spaces It should look like: MONGOLAB_URI=mongodb://...
 - Take a look at index.js to see how to connect and setup your database as well as handling GET and POST requests
   - Learn more about GET vs POST here (http://www.w3schools.com/tags/ref_httpmethods.asp)
 - The data you handle from index.js can be handled and rendered in pages/index.ejs through JavaScript templating
