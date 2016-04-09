@@ -27,6 +27,8 @@
         </form>
 
         <div class="posted-messages">
+          <!-- Loop through the messages data and render the text in a div one by one -->
+          <!-- This is the javascript templating format for building the pages with js -->
           <% for(var i=0; i<messages.length; i++) {%>
             <div class="single-message">
               <%= messages[i].messageText %>

@@ -28,16 +28,22 @@ db.once('open', function() {
 });
 
 // Create the Schema and Model for messages
+// Build your Schema and any methods before the Model
 var messageSchema = mongoose.Schema({
-  messageText: String
+  messageText: String // Only one data point - the message text
 });
+
+// Message Model
 var Message = mongoose.model('Message', messageSchema);
 
+
+// Look up and retrieve all currently posted messages
+// Once found, render the html page from pages/index.ejs with the messages data
 var getAndRenderPostedMessages = function(request, response) {
-  Message.find(function (err, messages) {
+  Message.find(function (err, messages) { //This function will be called and run once Message.find finishes
     if (err) return console.error(err);
-    var descendingMessages = messages.reverse();
-    response.render('pages/index', {messages: descendingMessages});
+    var descendingMessages = messages.reverse(); // The messages come in ascending order, let's reverse it
+    response.render('pages/index', {messages: descendingMessages}); // Render the page and hand the messages data
   })
 }
 
@@ -45,8 +51,9 @@ var getAndRenderPostedMessages = function(request, response) {
 
 app.get('/', function(request, response) {
   getAndRenderPostedMessages(request, response);
-});
+}); // Just get and render
 
+// First, send the message data from the post to our database and then afterward (callback), render the page.
 app.post('/', function (request, response) {
   var newMessage = new Message({ messageText: request.body.message });
   newMessage.save(function (err, newMessage) {
