@@ -34,6 +34,8 @@ To set up mongodb:
   - Add db credentials/URI to your .env file to test locally
 - Setup and add Mongoose to your webapp
   - (http://mongoosejs.com/docs/index.html)
+- Create a .env file in the main directory and paste the input from this command
+  - heroku config | grep MONGOLAB_URI
 - Take a look at index.js to see how to connect and setup your database as well as handling GET and POST requests
   - Learn more about GET vs POST here (http://www.w3schools.com/tags/ref_httpmethods.asp)
 - The data you handle from index.js can be handled and rendered in pages/index.ejs through JavaScript templating
